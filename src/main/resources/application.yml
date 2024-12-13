@@ -1,0 +1,25 @@
+server:
+  port : 8081
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    username: 'postgres'
+    url: jdbc:postgresql://localhost:5432/tasks_db
+    password: 'postgrespass'
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        format_sql: 'true'
+    hibernate:
+      ddl-auto: update
+    show-sql: 'true'
+logging:
+  level:
+    org:
+      hibernate:
+        SQL: DEBUG
+        type:
+          descriptor:
+            sql:
+              BasicBinder: TRACE
