@@ -2,6 +2,8 @@ package com.hexagonal.tasks.domain.ports.in.user;
 
 import com.hexagonal.tasks.domain.model.user.User;
 
+import java.util.Optional;
+
 public interface GetUserUseCase {
-    User getUser(Long userId);
+    Optional<User> getUserById(Long userId);
 }

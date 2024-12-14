@@ -1,4 +1,4 @@
-package com.hexagonal.tasks.application.services;
+package com.hexagonal.tasks.application.services.task;
 
 import com.hexagonal.tasks.domain.model.task.AdditionalTaskInfo;
 import com.hexagonal.tasks.domain.model.task.Task;

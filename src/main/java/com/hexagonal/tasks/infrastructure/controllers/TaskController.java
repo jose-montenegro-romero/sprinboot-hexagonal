@@ -1,6 +1,6 @@
 package com.hexagonal.tasks.infrastructure.controllers;
 
-import com.hexagonal.tasks.application.services.TaskService;
+import com.hexagonal.tasks.application.services.task.TaskService;
 import com.hexagonal.tasks.domain.model.task.AdditionalTaskInfo;
 import com.hexagonal.tasks.domain.model.task.Task;
 import org.springframework.http.HttpStatus;

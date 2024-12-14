@@ -1,4 +1,4 @@
-package com.hexagonal.tasks.application.usecases;
+package com.hexagonal.tasks.application.usecases.task;
 
 import com.hexagonal.tasks.domain.model.task.AdditionalTaskInfo;
 import com.hexagonal.tasks.domain.ports.in.task.GetAdditionalTaskInfoUseCase;
