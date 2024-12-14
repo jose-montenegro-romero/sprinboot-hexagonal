@@ -1,4 +1,4 @@
-package com.hexagonal.tasks.domain.model;
+package com.hexagonal.tasks.domain.model.task;
 
 import java.time.LocalDateTime;
 

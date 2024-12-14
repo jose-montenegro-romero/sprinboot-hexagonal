@@ -1,6 +1,6 @@
-package com.hexagonal.tasks.domain.ports.in;
+package com.hexagonal.tasks.domain.ports.in.task;
 
-import com.hexagonal.tasks.domain.model.Task;
+import com.hexagonal.tasks.domain.model.task.Task;
 
 import java.util.Optional;
 

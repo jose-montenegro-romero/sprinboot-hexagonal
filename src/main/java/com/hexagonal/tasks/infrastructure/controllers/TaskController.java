@@ -1,8 +1,8 @@
 package com.hexagonal.tasks.infrastructure.controllers;
 
 import com.hexagonal.tasks.application.services.TaskService;
-import com.hexagonal.tasks.domain.model.AdditionalTaskInfo;
-import com.hexagonal.tasks.domain.model.Task;
+import com.hexagonal.tasks.domain.model.task.AdditionalTaskInfo;
+import com.hexagonal.tasks.domain.model.task.Task;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

@@ -1,7 +1,7 @@
 package com.hexagonal.tasks.infrastructure.repositories;
 
-import com.hexagonal.tasks.domain.model.Task;
-import com.hexagonal.tasks.domain.ports.out.TaskRepositoryPort;
+import com.hexagonal.tasks.domain.model.task.Task;
+import com.hexagonal.tasks.domain.ports.out.task.TaskRepositoryPort;
 import com.hexagonal.tasks.infrastructure.entities.TaskEntity;
 import org.springframework.stereotype.Component;
 

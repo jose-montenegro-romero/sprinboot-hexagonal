@@ -1,8 +1,8 @@
 package com.hexagonal.tasks.application.usecases;
 
-import com.hexagonal.tasks.domain.model.Task;
-import com.hexagonal.tasks.domain.ports.in.CreateTaskUseCase;
-import com.hexagonal.tasks.domain.ports.out.TaskRepositoryPort;
+import com.hexagonal.tasks.domain.model.task.Task;
+import com.hexagonal.tasks.domain.ports.in.task.CreateTaskUseCase;
+import com.hexagonal.tasks.domain.ports.out.task.TaskRepositoryPort;
 
 public class CreateTaskUseCaseImpl implements CreateTaskUseCase {
 

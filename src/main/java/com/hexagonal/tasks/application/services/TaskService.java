@@ -1,12 +1,12 @@
 package com.hexagonal.tasks.application.services;
 
-import com.hexagonal.tasks.domain.model.AdditionalTaskInfo;
-import com.hexagonal.tasks.domain.model.Task;
-import com.hexagonal.tasks.domain.ports.in.CreateTaskUseCase;
-import com.hexagonal.tasks.domain.ports.in.DeleteTaskUseCase;
-import com.hexagonal.tasks.domain.ports.in.GetAdditionalTaskInfoUseCase;
-import com.hexagonal.tasks.domain.ports.in.RetrieveTaskUseCase;
-import com.hexagonal.tasks.domain.ports.in.UpdateTaskUseCase;
+import com.hexagonal.tasks.domain.model.task.AdditionalTaskInfo;
+import com.hexagonal.tasks.domain.model.task.Task;
+import com.hexagonal.tasks.domain.ports.in.task.CreateTaskUseCase;
+import com.hexagonal.tasks.domain.ports.in.task.DeleteTaskUseCase;
+import com.hexagonal.tasks.domain.ports.in.task.GetAdditionalTaskInfoUseCase;
+import com.hexagonal.tasks.domain.ports.in.task.RetrieveTaskUseCase;
+import com.hexagonal.tasks.domain.ports.in.task.UpdateTaskUseCase;
 
 import java.util.List;
 import java.util.Optional;

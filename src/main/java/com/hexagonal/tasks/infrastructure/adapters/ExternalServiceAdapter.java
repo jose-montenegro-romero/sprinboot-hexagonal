@@ -1,7 +1,7 @@
 package com.hexagonal.tasks.infrastructure.adapters;
 
-import com.hexagonal.tasks.domain.model.AdditionalTaskInfo;
-import com.hexagonal.tasks.domain.ports.out.ExternalServicePort;
+import com.hexagonal.tasks.domain.model.task.AdditionalTaskInfo;
+import com.hexagonal.tasks.domain.ports.out.task.ExternalServicePort;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestTemplate;
@@ -17,6 +17,7 @@ public class ExternalServiceAdapter implements ExternalServicePort {
 
     @Override
     public AdditionalTaskInfo getAdditionalTaskInfo(Long taskId) {
+        System.out.println("Este es el valor que llego : " + taskId);
         String apiUrl = "https://jsonplaceholder.typicode.com/todos/" + taskId;
         ResponseEntity<JsonPlaceholderTodo> response = restTemplate.getForEntity(apiUrl, JsonPlaceholderTodo.class);
         JsonPlaceholderTodo todo = response.getBody();

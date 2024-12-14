@@ -1,6 +1,6 @@
 package com.hexagonal.tasks.infrastructure.entities;
 
-import com.hexagonal.tasks.domain.model.Task;
+import com.hexagonal.tasks.domain.model.task.Task;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
