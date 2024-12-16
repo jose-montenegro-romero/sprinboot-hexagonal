@@ -1,4 +1,4 @@
-package com.hexagonal.tasks.infrastructure.controllers;
+package com.hexagonal.tasks.infrastructure.controllers.task;
 
 import com.hexagonal.tasks.application.services.task.TaskService;
 import com.hexagonal.tasks.domain.model.task.AdditionalTaskInfo;

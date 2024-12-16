@@ -1,4 +1,4 @@
-package com.hexagonal.tasks.infrastructure.config;
+package com.hexagonal.tasks.infrastructure.config.task;
 
 import com.hexagonal.tasks.application.services.task.TaskService;
 import com.hexagonal.tasks.application.usecases.task.*;
