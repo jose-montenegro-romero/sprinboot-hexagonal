@@ -17,16 +17,16 @@ import java.util.UUID;
 //@RequiredArgsConstructor
 public class UserController {
 
-    private final UserService userService;
-
-    public UserController(UserService userService) {
-        this.userService = userService;
-    }
-
-    @GetMapping("/{userId}")
-    public ResponseEntity<User> getTaskById(@PathVariable UUID userId) {
-        return userService.getUserById(userId)
-                .map(user -> new ResponseEntity<>(user, HttpStatus.OK))
-                .orElse(new ResponseEntity<>(HttpStatus.NOT_FOUND));
-    }
+//    private final UserService userService;
+//
+//    public UserController(UserService userService) {
+//        this.userService = userService;
+//    }
+//
+//    @GetMapping("/{userId}")
+//    public ResponseEntity<User> getTaskById(@PathVariable UUID userId) {
+//        return userService.getUserById(userId)
+//                .map(user -> new ResponseEntity<>(user, HttpStatus.OK))
+//                .orElse(new ResponseEntity<>(HttpStatus.NOT_FOUND));
+//    }
 }
