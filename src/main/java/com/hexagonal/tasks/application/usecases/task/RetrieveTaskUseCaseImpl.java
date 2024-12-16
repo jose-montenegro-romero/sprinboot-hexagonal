@@ -6,6 +6,7 @@ import com.hexagonal.tasks.domain.ports.out.task.TaskRepositoryPort;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.UUID;
 
 public class RetrieveTaskUseCaseImpl implements RetrieveTaskUseCase {
 
@@ -16,7 +17,7 @@ public class RetrieveTaskUseCaseImpl implements RetrieveTaskUseCase {
     }
 
     @Override
-    public Optional<Task> getTaskById(Long id) {
+    public Optional<Task> getTaskById(UUID id) {
         return taskRepositoryPort.findById(id);
     }
 

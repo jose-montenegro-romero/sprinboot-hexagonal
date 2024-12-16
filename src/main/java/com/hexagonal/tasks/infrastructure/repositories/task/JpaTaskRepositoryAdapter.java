@@ -1,12 +1,13 @@
-package com.hexagonal.tasks.infrastructure.repositories;
+package com.hexagonal.tasks.infrastructure.repositories.task;
 
 import com.hexagonal.tasks.domain.model.task.Task;
 import com.hexagonal.tasks.domain.ports.out.task.TaskRepositoryPort;
-import com.hexagonal.tasks.infrastructure.entities.TaskEntity;
+import com.hexagonal.tasks.infrastructure.entities.task.TaskEntity;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.UUID;
 import java.util.stream.Collectors;
 
 @Component
@@ -26,7 +27,7 @@ public class JpaTaskRepositoryAdapter implements TaskRepositoryPort {
     }
 
     @Override
-    public Optional<Task> findById(Long id) {
+    public Optional<Task> findById(UUID id) {
         return jpaTaskRepository.findById(id).map(TaskEntity::toDomainModel);
     }
 
@@ -48,7 +49,7 @@ public class JpaTaskRepositoryAdapter implements TaskRepositoryPort {
     }
 
     @Override
-    public boolean deleteById(Long id) {
+    public boolean deleteById(UUID id) {
         if (jpaTaskRepository.existsById(id)) {
             jpaTaskRepository.deleteById(id);
             return true;

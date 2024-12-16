@@ -8,6 +8,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.UUID;
 
 @RestController
 @RequestMapping("/api/tasks")
@@ -26,7 +27,7 @@ public class TaskController {
     }
 
     @GetMapping("/{taskId}")
-    public ResponseEntity<Task> getTaskById(@PathVariable Long taskId) {
+    public ResponseEntity<Task> getTaskById(@PathVariable UUID taskId) {
         return taskService.getTaskById(taskId)
                 .map(task -> new ResponseEntity<>(task, HttpStatus.OK))
                 .orElse(new ResponseEntity<>(HttpStatus.NOT_FOUND));
@@ -46,7 +47,7 @@ public class TaskController {
     }
 
     @DeleteMapping("/{taskId}")
-    public ResponseEntity<Void> deleteTaskById(@PathVariable Long taskId) {
+    public ResponseEntity<Void> deleteTaskById(@PathVariable UUID taskId) {
         if (taskService.deleteTask(taskId)) {
             return new ResponseEntity<>(HttpStatus.NO_CONTENT);
         } else {

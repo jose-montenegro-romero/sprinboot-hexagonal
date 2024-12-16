@@ -6,7 +6,7 @@ import com.hexagonal.tasks.domain.ports.in.task.GetAdditionalTaskInfoUseCase;
 import com.hexagonal.tasks.domain.ports.out.task.TaskRepositoryPort;
 import com.hexagonal.tasks.domain.ports.out.task.ExternalServicePort;
 import com.hexagonal.tasks.infrastructure.adapters.ExternalServiceAdapter;
-import com.hexagonal.tasks.infrastructure.repositories.JpaTaskRepositoryAdapter;
+import com.hexagonal.tasks.infrastructure.repositories.task.JpaTaskRepositoryAdapter;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 

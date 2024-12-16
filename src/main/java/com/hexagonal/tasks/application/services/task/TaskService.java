@@ -10,6 +10,7 @@ import com.hexagonal.tasks.domain.ports.in.task.UpdateTaskUseCase;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.UUID;
 
 public class TaskService implements CreateTaskUseCase, RetrieveTaskUseCase, UpdateTaskUseCase, DeleteTaskUseCase, GetAdditionalTaskInfoUseCase {
 
@@ -35,7 +36,7 @@ public class TaskService implements CreateTaskUseCase, RetrieveTaskUseCase, Upda
     }
 
     @Override
-    public Optional<Task> getTaskById(Long id) {
+    public Optional<Task> getTaskById(UUID id) {
         return retrieveTaskUseCase.getTaskById(id);
     }
 
@@ -50,7 +51,7 @@ public class TaskService implements CreateTaskUseCase, RetrieveTaskUseCase, Upda
     }
 
     @Override
-    public boolean deleteTask(Long id) {
+    public boolean deleteTask(UUID id) {
         return deleteTaskUseCase.deleteTask(id);
     }
 

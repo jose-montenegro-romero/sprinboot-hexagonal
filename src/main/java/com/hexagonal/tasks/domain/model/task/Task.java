@@ -1,16 +1,17 @@
 package com.hexagonal.tasks.domain.model.task;
 
 import java.time.LocalDateTime;
+import java.util.UUID;
 
 public class Task {
 
-    private Long id;
+    private UUID id;
     private String title;
     private String description;
     private LocalDateTime creationDate;
     private boolean completed;
 
-    public Task(Long id, String title, String description, LocalDateTime creationDate, boolean completed) {
+    public Task(UUID id, String title, String description, LocalDateTime creationDate, boolean completed) {
         this.id = id;
         this.title = title;
         this.description = description;
@@ -20,11 +21,11 @@ public class Task {
 
     // Getters and setters
 
-    public Long getId() {
+    public UUID getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(UUID id) {
         this.id = id;
     }
 
