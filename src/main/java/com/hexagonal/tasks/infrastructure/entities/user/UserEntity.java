@@ -1,5 +1,6 @@
 package com.hexagonal.tasks.infrastructure.entities.user;
 
+import com.hexagonal.tasks.domain.model.user.User;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -27,4 +28,12 @@ public class UserEntity {
     private String lastName;
 
     private String emailAddress;
+
+//    public static UserEntity fromDomainModel(User user) {
+//        return new UserEntity(user.getId(), user.getFirstName(), user.getLastName(), user.getEmailAddress());
+//    }
+
+    public User toDomainModel() {
+        return new User(id, firstName, lastName, emailAddress);
+    }
 }

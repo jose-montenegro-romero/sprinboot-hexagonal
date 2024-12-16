@@ -4,6 +4,7 @@ import com.hexagonal.tasks.domain.model.user.User;
 import com.hexagonal.tasks.domain.ports.in.user.GetUserUseCase;
 
 import java.util.Optional;
+import java.util.UUID;
 
 public class UserService implements GetUserUseCase {
 
@@ -14,7 +15,7 @@ public class UserService implements GetUserUseCase {
     }
 
     @Override
-    public Optional<User> getUserById(Long userId) {
+    public Optional<User> getUserById(UUID userId) {
         return getUserUseCase.getUserById(userId);
     }
 }

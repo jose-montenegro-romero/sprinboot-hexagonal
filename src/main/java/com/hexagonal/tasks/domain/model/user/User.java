@@ -1,26 +1,27 @@
 package com.hexagonal.tasks.domain.model.user;
 
 import java.time.LocalDateTime;
+import java.util.UUID;
 
 public class User {
 
-    private Long id;
+    private UUID id;
     private String firstName;
     private String lastName;
     private String emailAddress;
 
-    public User(Long id, String lastName, String firstName, String emailAddress) {
+    public User(UUID id, String lastName, String firstName, String emailAddress) {
         this.id = id;
         this.lastName = lastName;
         this.firstName = firstName;
         this.emailAddress = emailAddress;
     }
 
-    public void setId(Long id) {
+    public void setId(UUID id) {
         this.id = id;
     }
 
-    public Long getId() {
+    public UUID getId() {
         return id;
     }
 

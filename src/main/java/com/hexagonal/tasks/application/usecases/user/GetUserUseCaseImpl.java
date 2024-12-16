@@ -5,6 +5,7 @@ import com.hexagonal.tasks.domain.ports.in.user.GetUserUseCase;
 import com.hexagonal.tasks.domain.ports.out.user.UserRepositoryPort;
 
 import java.util.Optional;
+import java.util.UUID;
 
 public class GetUserUseCaseImpl implements GetUserUseCase {
 
@@ -15,7 +16,7 @@ public class GetUserUseCaseImpl implements GetUserUseCase {
     }
 
     @Override
-    public Optional<User> getUserById(Long userId) {
+    public Optional<User> getUserById(UUID userId) {
         return userRepositoryPort.findById(userId);
     }
 }
