@@ -10,12 +10,12 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class ApplicationConfigUser {
 
-//    @Bean
-//    public UserService userService(UserRepositoryPort userRepositoryPort){
-//        return new UserService(
-//                new GetUserUseCaseImpl(userRepositoryPort)
-//        );
-//    }
+    @Bean
+    public UserService userService(UserRepositoryPort userRepositoryPort){
+        return new UserService(
+                new GetUserUseCaseImpl(userRepositoryPort)
+        );
+    }
 
     @Bean
     public UserRepositoryPort userRepositoryPort(JpaUserRepositoryAdapter jpaUserRepositoryAdapter){
